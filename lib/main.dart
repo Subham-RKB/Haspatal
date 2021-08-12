@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       routes: {
         '/': (_) => Welcome(),
-        //'/loginpage': (_) => loginpage(),
+        '/loginpage': (_) => SignInPage(),
       },
     );
   }
