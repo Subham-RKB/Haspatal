@@ -1,4 +1,8 @@
 import 'dart:js';
+<<<<<<< HEAD
+=======
+import 'package:flutter/cupertino.dart';
+>>>>>>> 538a0fc31b53a8ea09ee1f658c4ecbff642dd68f
 import 'package:flutter/material.dart';
 import './SignInPage.dart';
 import 'package:haspatal/main.dart';
@@ -6,7 +10,7 @@ import 'package:haspatal/main.dart';
 class Welcome extends StatelessWidget {
   Color bg = Color(0xff434A5A);
   Color wht = Color(0xffFFFFFF);
-  Widget _button(String textt) {
+  Widget _button(context,String textt) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 60),
       child: MaterialButton(
@@ -15,7 +19,7 @@ class Welcome extends StatelessWidget {
         //minWidth: 70,
         onPressed: () {
           Navigator.push(
-            this.context,
+            context,
             MaterialPageRoute(builder: (context) => SignInPage()),
           );
 
@@ -80,7 +84,7 @@ class Welcome extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 150),
-                _button("GET STARTED"),
+                _button(context,"GET STARTED"),
                 // Align(
                 //   alignment: Alignment.bottomCenter,
                 //   child: Container(
