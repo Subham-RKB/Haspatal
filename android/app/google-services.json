@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1091838987106",
+    "project_id": "haspatal-60fd7",
+    "storage_bucket": "haspatal-60fd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091838987106:android:24fad83b26340f5441ba3b",
+        "android_client_info": {
+          "package_name": "com.example.haspatal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091838987106-vb8gve2e3gv4q8usqrbbbo2fn72cacqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDcw48cCJyA-LBBhLTwUCY164X7g37K4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091838987106-vb8gve2e3gv4q8usqrbbbo2fn72cacqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

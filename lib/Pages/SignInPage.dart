@@ -10,6 +10,8 @@ class SignInPage extends StatefulWidget {
   _SignInPageState createState() => _SignInPageState();
 }
 
+final Color cc = Color(0xFFC4C4C4);
+
 class _SignInPageState extends State<SignInPage> {
   final _formKey = GlobalKey<FormState>();
   String email = '';
@@ -103,7 +105,11 @@ class _SignInPageState extends State<SignInPage> {
                           border: OutlineInputBorder(),
                           //labelText: 'Username',
                           hintText: 'Username',
+                          //fillColor: cc,
+                          //hoverColor: cc,
+                          //focusColor: cc,
                         ),
+
                         onChanged: (val) {
                           setState(() => email = val);
                         },
