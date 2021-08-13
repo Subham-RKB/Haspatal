@@ -1,4 +1,3 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:haspatal/Pages/SignUpPage.dart';
 import './SignInPage.dart';
@@ -17,7 +16,7 @@ class Welcome extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => SignUpPage()),
+            MaterialPageRoute(builder: (context) => SignInPage()),
           );
 
           //startSignIn();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haspatal/Authentication/googlesignin.dart';
 import 'package:haspatal/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -132,24 +133,34 @@ class _SignInPageState extends State<SignInPage> {
                           textAlign: TextAlign.start,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            right: 25.0, left: 25.0, bottom: 30.0, top: 5.0),
-                        child: TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Password',
-                          ),
-                          onChanged: (val) {
-                            setState(() => password = val);
-                          },
+                    _button('Log In'),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        primary: pc,
+                        onPrimary: Colors.white,
+                        minimumSize: Size(320, 60),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      _button('Log In'),
-                    ],
-                  ),
+                      icon: FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Colors.red,
+                      ),
+                      label: Text('Sign Up With Google'),
+                      onPressed: () {
+                        final provider = Provider.of<GoogleSignInProvider>(
+                            context,
+                            listen: false);
+                        provider.googleLogin();
+                      },
+                    )
+                  ],
                 ),
+              ),
               ]),
             ),
           ),
