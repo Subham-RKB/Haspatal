@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haspatal/Authentication/googlesignin.dart';
 import 'package:haspatal/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -144,6 +145,30 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     _button('Log In'),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ElevatedButton.icon(
+                      style: ElevatedButton.styleFrom(
+                        primary: pc,
+                        onPrimary: Colors.white,
+                        minimumSize: Size(320, 60),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                      icon: FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Colors.red,
+                      ),
+                      label: Text('Sign Up With Google'),
+                      onPressed: () {
+                        final provider = Provider.of<GoogleSignInProvider>(
+                            context,
+                            listen: false);
+                        provider.googleLogin();
+                      },
+                    )
                   ],
                 ),
               ),

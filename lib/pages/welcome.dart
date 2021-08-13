@@ -1,4 +1,3 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
 import './SignInPage.dart';
 import 'package:haspatal/main.dart';
