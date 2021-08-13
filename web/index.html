@@ -30,6 +30,32 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAoqV6kS_4lAhmt_98vbknen4HYYAJK8mk",
+      authDomain: "brew_crew.firebaseapp.com",
+      databaseURL: "https://brew_crew.firebaseio.com",
+      projectId: "ninja-brew-crew-ba46d",
+      storageBucket: "brew_crew.appspot.com",
+      messagingSenderId: "...",
+      appId: "1:207660597321:android:df164a8459698555c8bf98",
+      measurementId: "G-...",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    
+  </script>
+
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;

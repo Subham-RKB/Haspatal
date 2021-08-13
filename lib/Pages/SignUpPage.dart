@@ -4,15 +4,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
 final Color cc = Color(0xFFC4C4C4);
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   final _formKey = GlobalKey<FormState>();
   String email = '';
   String password = '';
@@ -25,15 +25,6 @@ class _SignInPageState extends State<SignInPage> {
         height: 60,
         //minWidth: 70,
         onPressed: () async {
-          //startSignIn();
-          //if (_formKey.currentState.validate()) {
-          // print(email);
-          // print(password);
-          //dynamic result = await _auth.registerWithEmail(email, password);
-          //if (result == null) {
-          //setState(() => {error = 'Please supply a valid email'});
-          //}
-          //}
         },
         color: pc,
         child: SingleChildScrollView(
@@ -82,7 +73,7 @@ class _SignInPageState extends State<SignInPage> {
               child: Column(children: <Widget>[
                 SizedBox(height: 30),
                 Text(
-                  'Log In',
+                  'Sign Up',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 46.0,
@@ -146,7 +137,7 @@ class _SignInPageState extends State<SignInPage> {
                           },
                         ),
                       ),
-                      _button('Log In'),
+                      _button('Register'),
                     ],
                   ),
                 ),

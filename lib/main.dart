@@ -2,6 +2,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:haspatal/Pages/SignUpPage.dart';
 import 'package:haspatal/Pages/welcome.dart';
 import 'Pages/SignInPage.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       routes: {
         '/': (_) => Welcome(),
-        '/loginpage': (_) => SignInPage(),
+        '/signup': (_) => SignUpPage(),
       },
     );
   }
