@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:haspatal/Authentication/googlesignin.dart';
+import 'package:haspatal/Pages/SignUpPage.dart';
 import 'package:haspatal/Pages/welcome.dart';
 import 'package:provider/provider.dart';
 import 'Pages/SignInPage.dart';
@@ -24,8 +25,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           //home: HomePage(),
           routes: {
-            '/': (_) => SignInPage(),
-            //'/loginpage': (_) => SignInPage(),
+            '/': (_) => Welcome(),
+            '/login': (_) => SignInPage(),
+            '/signup' : (_)=> SignUpPage(),
           },
         ),
       );

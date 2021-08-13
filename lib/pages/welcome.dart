@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haspatal/Pages/SignUpPage.dart';
 import './SignInPage.dart';
 import 'package:haspatal/main.dart';
 
@@ -7,7 +8,7 @@ class Welcome extends StatelessWidget {
   Color wht = Color(0xffFFFFFF);
   Widget _button(String textt, BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 60),
+      margin: EdgeInsets.symmetric(horizontal: 120),
       child: MaterialButton(
         elevation: 0,
         height: 80,
@@ -36,7 +37,10 @@ class Welcome extends StatelessWidget {
               textt,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  fontSize: 28, color: Colors.white, fontFamily: 'Red Rose'),
+                  fontSize: 28, 
+                  color: Colors.white, 
+                  fontFamily: 'RedRose',
+                  ),
             ),
           ],
         ),
@@ -62,40 +66,27 @@ class Welcome extends StatelessWidget {
                 topRight: Radius.circular(60),
               ),
             ),
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(25, 0, 0, 0),
-                    child: Text(
-                      '\nWELCOME\nTO\nHASPATAL',
-                      style: TextStyle(
-                        fontSize: 40,
-                        //fontFamily: 'RedRose',
-                        fontWeight: FontWeight.bold,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      margin: EdgeInsets.fromLTRB(25, 0, 0, 0),
+                      child: Text(
+                        '\nWELCOME\nTO\nHASPATAL',
+                        style: TextStyle(
+                          fontSize: 50,
+                          fontFamily: 'RedRose',
+                          // fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(height: 150),
-                _button("GET STARTED", context),
-                // Align(
-                //   alignment: Alignment.bottomCenter,
-                //   child: Container(
-                //     margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                //     child: ElevatedButton(
-                //       child: Text(
-                //         'GET STARTED',
-                //         style: TextStyle(
-                //           fontSize: 30.0,
-                //         ),
-                //       ),
-                //       onPressed: () {},
-                //     ),
-                //   ),
-                // ),
-              ],
+                  SizedBox(height: 50),
+                  _button("GET STARTED", context),
+                ],
+              ),
             ),
           ),
         ],
